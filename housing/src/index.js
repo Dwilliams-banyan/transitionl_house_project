@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider} from 'react-redux'
 import ourStore from './store/configStore'
 // import App from './App';
+import 'mdbreact/dist/css/mdb.css'
+import 'bootstrap-css-only/css/bootstrap.min.css'
 import * as serviceWorker from './serviceWorker';
 import AppRouter from './router/appRouter'
 import { addResident } from './action/creatingActions'

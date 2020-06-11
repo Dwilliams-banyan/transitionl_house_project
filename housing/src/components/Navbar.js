@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBIcon } from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 
 class NavBarApp extends Component {
@@ -17,7 +17,7 @@ render() {
       <MDBNavbar color="indigo darken-3" dark expand="md">
 
         <MDBNavbarBrand>
-          <strong className="white-text">Kash App</strong>
+          <strong className="white-text">Transition House</strong>
         </MDBNavbarBrand>
 
         <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -30,30 +30,29 @@ render() {
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="/new">New Transaction</MDBNavLink>
+              <MDBNavLink to="/weekend_pass">Sign-Up</MDBNavLink>
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="/aboutus">About Us</MDBNavLink>
+              <MDBNavLink to="/aboutus">Sign-In</MDBNavLink>
+            </MDBNavItem>
+
+            <MDBNavItem>
+              <MDBDropdown>
+                <MDBDropdownToggle dark color="blue accent">
+                  House Requests
+                </MDBDropdownToggle>
+
+                <MDBDropdownMenu basic>
+                  <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem>
+                  <MDBDropdownItem>Time Off</MDBDropdownItem>
+                  <MDBDropdownItem>Moving Out</MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
             </MDBNavItem>
 
           </MDBNavbarNav>
 
-          <MDBNavbarNav right>
-
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="twitter" />
-              </MDBNavLink>
-            </MDBNavItem>
-            
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="google-plus-g" />
-              </MDBNavLink>
-            </MDBNavItem>
-
-          </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
    
