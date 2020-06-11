@@ -30,23 +30,33 @@ render() {
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="/weekend_pass">Sign-Up</MDBNavLink>
+              <MDBNavLink to="#">Sign-Up</MDBNavLink>
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="/aboutus">Sign-In</MDBNavLink>
+              <MDBNavLink to="#">Sign-In</MDBNavLink>
             </MDBNavItem>
 
             <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle dark color="blue accent">
+                <MDBDropdownToggle  color="blue accent">
                   House Requests
                 </MDBDropdownToggle>
 
                 <MDBDropdownMenu basic>
-                  <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem>
-                  <MDBDropdownItem>Time Off</MDBDropdownItem>
-                  <MDBDropdownItem>Moving Out</MDBDropdownItem>
+
+                  <MDBNavLink to="/weekend_pass"> 
+                    <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem> 
+                  </MDBNavLink>
+
+                  <MDBNavLink to="/moveout_list"> 
+                    <MDBDropdownItem>Time Off</MDBDropdownItem> 
+                  </MDBNavLink>
+
+                  <MDBNavLink to="/moveout_request"> 
+                    <MDBDropdownItem>Moving Out</MDBDropdownItem> 
+                  </MDBNavLink>
+
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
