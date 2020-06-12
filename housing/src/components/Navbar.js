@@ -45,7 +45,7 @@ render() {
 
                 <MDBDropdownMenu basic>
 
-                  <MDBNavLink to="/weekend_pass"> 
+                  <MDBNavLink to="/weekend_pass_form"> 
                     <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem> 
                   </MDBNavLink>
 
