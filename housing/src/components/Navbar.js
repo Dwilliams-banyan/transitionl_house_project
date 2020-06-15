@@ -49,11 +49,11 @@ render() {
                     <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem> 
                   </MDBNavLink>
 
-                  <MDBNavLink to="/moveout_list"> 
+                  <MDBNavLink to="/day-off_form"> 
                     <MDBDropdownItem>Time Off</MDBDropdownItem> 
                   </MDBNavLink>
 
-                  <MDBNavLink to="/moveout_request"> 
+                  <MDBNavLink to="/moveout_form"> 
                     <MDBDropdownItem>Moving Out</MDBDropdownItem> 
                   </MDBNavLink>
 

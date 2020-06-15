@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 const MoveOutList = (props) => {
     return (
         <div>
-            <h1>Testing</h1>
             {props.request.map(item =>(
               item.request=="move out" && <MoveOutNotice key={item.id} {...item} />
             ))}

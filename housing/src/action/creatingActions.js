@@ -1,13 +1,11 @@
 import { v4 as uuidv4} from 'uuid'
 
 
-export const addResident = ({name,age})=>({
+export const addResident = (person)=>({
     type : "ADD_RESIDENT",
     resident : {
         id:uuidv4(),
-        name,
-        age
-
+        ...person
     }
 })
 

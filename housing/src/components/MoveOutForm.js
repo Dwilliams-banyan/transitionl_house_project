@@ -39,7 +39,14 @@ const MoveOutForm = ({history,addMoveOutNotice}) => {
 
         return (
             <div className="text-center m-auto">
-                <h1>At the least Two-weeks notice</h1>
+
+                {error && <h3>{error}</h3>}
+
+                <h1>Moving Out Form</h1>
+
+                <br/>
+                <p>Two week notice is required!</p>
+
                 <div className="form-group m-auto w-50">
                     <label>Resident Name: </label>
                     <input 
@@ -62,8 +69,7 @@ const MoveOutForm = ({history,addMoveOutNotice}) => {
                     <label>Street Address</label>
                     <input 
                     className="form-control text-center" 
-                    type="text" 
-                    placeholder="street address" 
+                    type="text"  
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     />
@@ -77,8 +83,9 @@ const MoveOutForm = ({history,addMoveOutNotice}) => {
                     />
                     <br/>
 
-                    <label>State</label>
+                    <label>State </label>
                     <select 
+                    className="ml-2"
                     value={yourState} 
                     onChange={(e) => setYourState(e.target.value)}
                     >
@@ -138,20 +145,18 @@ const MoveOutForm = ({history,addMoveOutNotice}) => {
                         <option value="wy" >WY</option>
                     </select>
 
-                    <label>Zip Code</label>
+                    <label className="ml-5">Zip Code</label>
                     <input 
-                    className="" 
-                    type="?"
+                    className="ml-2" 
+                    type="text"
                     value={zip}
                     onChange={(e)=> setZip(e.target.value)} 
                     />
 
                     <br/>
-                    {error && <h3>{error}</h3>}
-
                     <Fragment>
-                        <MDBBtn onClick={onCancel}>Cancel</MDBBtn>
-                        <MDBBtn onClick={onSubmit}>Submit</MDBBtn>
+                        <MDBBtn className="mr-5" color="red" onClick={onCancel}>Cancel</MDBBtn>
+                        <MDBBtn color="green" onClick={onSubmit}>Submit</MDBBtn>
                     </Fragment>
                 </div>
 

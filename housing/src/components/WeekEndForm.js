@@ -1,4 +1,4 @@
-import React, { useState,  } from "react";
+import React, { useState, Fragment } from "react";
 import {MDBBtn} from 'mdbreact'
 import {connect} from 'react-redux'
 import {addWeekEndPassNotice} from '../action/requestAction'
@@ -18,102 +18,62 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
   const [paroleOfficerName, setParoleOfficerName] = useState("")
   const [paroleOfficerNum, setParoleOfficerNum] = useState("")
   const [error, setError] = useState(undefined)
-
+  // const [data, setData] = useState({})
   
 
   const onSubmit = () => {
     let data = {residentName,pass,dateOfPass,reason,timeLeaving,returningDate,returningTime,nameOfVisitor,numOfVisitor,parole,paroleOfficerName,paroleOfficerNum}
    
-    console.log(data,"more Testing")
-    console.log(parole, pass)
+    switch(parole){
+      case "yes":
 
-    if(!parole === "" && !pass === ""){
-      if ( parole == "ido" && pass =="weekend" ) {
-
-        if(residentName == "" || dateOfPass == "" || returningDate == "" || paroleOfficerName == "" || paroleOfficerNum == ""){
-          setError("Error:1:31 Incomplete try again")
-          }
-          addWeekEndPassNotice(data)
-        }
-  
-      else if (parole == "ido" && pass == "visit"){
-
-        if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == "" || paroleOfficerName == "" || paroleOfficerNum == ""){
-          setError("Error:2:38 You did not put your name, or date you are leaving, or date your coming back")
-            }
-            addWeekEndPassNotice(data)
-      }
-  
-      else if(parole == "idont" && pass == "weekend"){
-              if(residentName == "" || dateOfPass == "" || returningDate == ""){
-                setError("Error:3:45 you did not fill enough information please try again")
-                }
-                addWeekEndPassNotice(data)
-  
-      }
-      else {
-        if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == ""){
-          setError("Error:4:50 Need more information before we can submit your request")
-          }
-          addWeekEndPassNotice(data)
-          }
-    }
-    else{
-      setError("I need to know if you are on parole and what type of pass this is.")
-      }
-
-
-
-    // switch(paroleOfficer){
-    //   case "ido":
-
-    //     switch(pass){
-    //       case "weekend":
-    //         if(residentName == "" || dateOfPass == "" || returningDate == "" || paroleOfficerName== "" || paroleOfficerNum == ""){
-    //           setError("Error:1:63 You did not fill enough information try again.")
-    //           }
-    //           addWeekEndPassNotice(data)
-    //           history.push('/weekend_pass_list')
-    //         break;
+        switch(pass){
+          case "weekend":
+            if(residentName == "" || dateOfPass == "" || returningDate == "" || paroleOfficerName== "" || paroleOfficerNum == ""){
+              setError("Error:1:63 You did not fill enough information try again.")
+              }
+              addWeekEndPassNotice(data)
+              history.push('/weekend_pass_list')
+            break;
           
-    //       case "visit":
-    //         if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == "" || paroleOfficerName == "" || paroleOfficerNum == ""){
-    //           setError("Error:2:71 You did not put your name, or date you are leaving, or date your coming back")
-    //           }
-    //           addWeekEndPassNotice(data)
-    //           history.push('/weekend_pass_list')
-    //         break;
+          case "visit":
+            if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == "" || paroleOfficerName == "" || paroleOfficerNum == ""){
+              setError("Error:2:71 You did not put your name, or date you are leaving, or date your coming back")
+              }
+              addWeekEndPassNotice(data)
+              history.push('/weekend_pass_list')
+            break;
 
-    //       default:
-    //         setError("Error:3:78 I need to know what type of pass you are requesting")
-    //         }
+          default:
+            setError("Error:3:78 I need to know what type of pass you are requesting")
+            }
 
-    //   case "idont":
+      case "no":
 
-    //     switch(pass){
-    //       case "weekend":
-    //         if(residentName == "" || dateOfPass == "" || returningDate == ""){
-    //           setError("Error:4:86 you did not fill enough information please try again")
-    //           }
-    //           addWeekEndPassNotice(data)
-    //           history.push('/weekend_pass_list')
-    //         break;
+        switch(pass){
+          case "weekend":
+            if(residentName == "" || dateOfPass == "" || returningDate == ""){
+              setError("Error:4:86 you did not fill enough information please try again")
+              }
+              addWeekEndPassNotice(data)
+              history.push('/weekend_pass_list')
+            break;
 
-    //       case "visit":
-    //         if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == ""){
-    //           setError("Error:5:94 Need more information before we can submit your request")
-    //           }
-    //           addWeekEndPassNotice(data)
-    //           history.push('/weekend_pass_list')
-    //         break;
+          case "visit":
+            if(residentName == "" || dateOfPass == "" || nameOfVisitor == "" || numOfVisitor == ""){
+              setError("Error:5:94 Need more information before we can submit your request")
+              }
+              addWeekEndPassNotice(data)
+              history.push('/weekend_pass_list')
+            break;
 
-    //       default:
-    //         setError("Error: I need to know what type of pass you are requesting")
-    //         }
+          default:
+            setError("Error: I need to know what type of pass you are requesting")
+            }
 
-    //   default:
-    //    setError("ERROR:6:105 I need to know if you have a parole Officer")
-    //   }
+      default:
+       setError("ERROR:6:105 I need to know if you have a parole Officer")
+      }
 
 
   }
@@ -169,7 +129,7 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         placeholder="The reason for visit or pass" 
         />
 
-        <label>Time leaving :</label>
+        <label>Time you are leaving :</label>
         <input 
         className="form-control text-center" 
         type="time" 
@@ -178,7 +138,7 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         placeholder="The time you are leaving" 
         />
 
-        <label>Date of Returning : </label>
+        <label>Date of your Return : </label>
         <input 
         className="form-control text-center" 
         type="date" 
@@ -187,7 +147,7 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         placeholder="The day you are returning" 
         />
 
-        <label>Time of Returning : </label>
+        <label>Time you are Returning : </label>
         <input 
         className="form-control text-center" 
         type="time" 
@@ -215,17 +175,20 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         />
 
         <br/>
+
         <label> <h6>Are you on parole?</h6></label>
-        <select className="ml-3 browser-default" value={parole} onChange={(e) => setParole(e.target.value)} 
+        <select 
+        className="ml-3 browser-default" 
+        value={parole} 
+        onChange={(e) => setParole(e.target.value)} 
         >
           <option value="">Select one</option>
-          <option value="ido">Yes</option>
-          <option value="idont">No</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select> 
 
-          <br/>
-        
-
+        <br/>
+      
         <label>Parole Officer's Name : </label>
         <input 
         className="form-control text-center" 
@@ -243,10 +206,14 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         onChange={(e) => setParoleOfficerNum(e.target.value)} 
         placeholder="Number of you parole officer" 
         />
+
         <br/>        
-          <MDBBtn rounded color="" onClick={onCancel}>Cancel</MDBBtn>
-          <MDBBtn rounded color="" onClick={onSubmit}>Submit</MDBBtn>
-        
+        <div className="text-center">
+        <Fragment>
+          <MDBBtn className="mr-5" rounded color="red" onClick={onCancel}>Cancel</MDBBtn>
+          <MDBBtn rounded color="green" onClick={onSubmit}>Submit</MDBBtn>
+        </Fragment>
+        </div>
     </div>
   );
 }

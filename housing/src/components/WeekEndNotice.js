@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBCard, MDBCardTitle, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
+import { MDBCard, MDBCardTitle, MDBIcon } from 'mdbreact';
 
 
 const WeekEndNotice = ({pass, residentName, dateOfPass, reason, 
@@ -7,11 +7,11 @@ const WeekEndNotice = ({pass, residentName, dateOfPass, reason,
     returningTime, nameOfVisitor, 
     numOfVisitor, paroleOfficerName, paroleOfficerNum}) => {
   return (
-    <MDBRow>
-      <MDBCol md='8'>
-        <MDBCard>
+        
+    <div className="mx-auto w-75 mb-3 pt-4">
+      <MDBCard className="indigo">
           <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
-            <div>
+            <div className="mx-auto">
               <h5 className='pink-text'>
                 <MDBIcon icon='chart-pie' /> {residentName}
               </h5>
@@ -30,8 +30,8 @@ const WeekEndNotice = ({pass, residentName, dateOfPass, reason,
             </div>
           </div>
         </MDBCard>
-      </MDBCol>
-    </MDBRow>
+    </div>
+
   )
 }
 
