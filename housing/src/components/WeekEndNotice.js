@@ -8,8 +8,8 @@ const WeekEndNotice = ({pass, residentName, dateOfPass, reason,
     numOfVisitor, paroleOfficerName, paroleOfficerNum}) => {
   return (
         
-    <div className="mx-auto w-75 mb-3 pt-4">
-      <MDBCard className="indigo">
+    <div className="mx-auto w-50 mb-3 pt-4">
+      <MDBCard className="test">
           <div className='text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4'>
             <div className="mx-auto">
               <h5 className='pink-text'>

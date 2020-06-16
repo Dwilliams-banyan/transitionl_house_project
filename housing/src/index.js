@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider} from 'react-redux'
 import ourStore from './store/configStore'
 // import App from './App';
-import 'mdbreact/dist/css/mdb.css'
 import 'bootstrap-css-only/css/bootstrap.min.css'
+import 'mdbreact/dist/css/mdb.css'
 import * as serviceWorker from './serviceWorker';
 import AppRouter from './router/appRouter'
 import { addResident } from './action/creatingActions'
@@ -14,9 +14,9 @@ const store = ourStore()
 
 store.subscribe(()=> console.log(store.getState()))
 
-store.dispatch(addResident({name:"DeMarcus",age:27,relaseDate:"2020/05/30",moveInDate:"2020/05/30"}))
-store.dispatch(addResident({name:"Alex",age:31,relaseDate:"2019/09/13",moveInDate:"2019/09/13"}))
-store.dispatch(addResident({name:"Roy",age:39,relaseDate:"2019/12/24",moveInDate:"2019/12/24"}))
+store.dispatch(addResident({name:"DeMarcus",dateOfBirth:"1993/01/29",parole:"no",age:27,relaseDate:"2020/05/30",moveInDate:"2020/05/30"}))
+store.dispatch(addResident({name:"Alex",age:31,dateOfBirth:"1979/12/06",parole:"yes",relaseDate:"2019/09/13",moveInDate:"2019/09/13"}))
+store.dispatch(addResident({name:"Roy",age:39,dateOfBirth:"1990/07/22",parole:"no",relaseDate:"2019/12/24",moveInDate:"2019/12/24"}))
 
 store.dispatch(addMoveOutNotice({name:"Demarcus",dayOfMove:"01/29/93",address:"6320 Jocelyn Dr",yourState:"TN",zip:"37416",city:"Chattanooga"}))
 store.dispatch(addMoveOutNotice({name:"Alex",dayOfMove:"01/29/93",address:"6320 Jocelyn Dr",yourState:"TN",zip:"37416",city:"Chattanooga"}))

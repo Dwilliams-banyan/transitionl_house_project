@@ -14,7 +14,7 @@ toggleCollapse = () => {
 render() {
   return (
 
-      <MDBNavbar color="indigo darken-3" dark expand="md">
+      <MDBNavbar color="light-blue" dark expand="md">
 
         <MDBNavbarBrand>
           <strong className="white-text">Transition House</strong>
@@ -30,7 +30,7 @@ render() {
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="#">Sign-Up</MDBNavLink>
+              <MDBNavLink to="/sign-up_page">Sign-Up</MDBNavLink>
             </MDBNavItem>
 
             <MDBNavItem>
@@ -38,8 +38,12 @@ render() {
             </MDBNavItem>
 
             <MDBNavItem>
+              <MDBNavLink to="/addresident">Add Resident</MDBNavLink>
+            </MDBNavItem>
+
+            <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle  color="blue accent">
+                <MDBDropdownToggle  color=" amber lighten-1">
                   House Requests
                 </MDBDropdownToggle>
 
@@ -71,3 +75,5 @@ render() {
 }
 
 export default NavBarApp;
+
+

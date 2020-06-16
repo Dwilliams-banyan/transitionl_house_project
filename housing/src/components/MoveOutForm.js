@@ -2,6 +2,7 @@ import React, {useState, Fragment} from 'react';
 import {MDBBtn} from 'mdbreact'
 import {connect} from 'react-redux'
 import {addMoveOutNotice} from '../action/requestAction'
+import '../style/hover.css'
 
 
 const MoveOutForm = ({history,addMoveOutNotice}) => {
@@ -155,8 +156,8 @@ const MoveOutForm = ({history,addMoveOutNotice}) => {
 
                     <br/>
                     <Fragment>
-                        <MDBBtn className="mr-5" color="red" onClick={onCancel}>Cancel</MDBBtn>
-                        <MDBBtn color="green" onClick={onSubmit}>Submit</MDBBtn>
+                        <MDBBtn className="mr-5" color="white"  onClick={onCancel}>Cancel</MDBBtn>
+                        <MDBBtn  color="white" onClick={onSubmit}>Submit</MDBBtn>
                     </Fragment>
                 </div>
 

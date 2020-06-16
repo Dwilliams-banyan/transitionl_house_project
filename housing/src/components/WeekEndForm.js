@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import {MDBBtn} from 'mdbreact'
 import {connect} from 'react-redux'
 import {addWeekEndPassNotice} from '../action/requestAction'
+import '../style/hover.css'
 
 const WeekEndForm = ({addWeekEndPassNotice,history}) => {
 
@@ -208,11 +209,11 @@ const WeekEndForm = ({addWeekEndPassNotice,history}) => {
         />
 
         <br/>        
-        <div className="text-center">
-        <Fragment>
-          <MDBBtn className="mr-5" rounded color="red" onClick={onCancel}>Cancel</MDBBtn>
-          <MDBBtn rounded color="green" onClick={onSubmit}>Submit</MDBBtn>
-        </Fragment>
+        <div className="text-center ">
+          <Fragment>
+              <MDBBtn className="mr-5" color="white" rounded  onClick={onCancel}>Cancel</MDBBtn>
+              <MDBBtn  rounded color="white" onClick={onSubmit}>Submit</MDBBtn>
+          </Fragment>
         </div>
     </div>
   );

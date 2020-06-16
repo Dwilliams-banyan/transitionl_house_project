@@ -1,0 +1,15 @@
+.hover1 {
+    color:red ;
+}
+
+.hover2 {
+    color: green;
+}
+
+.test{
+    background: #64a09e !important
+}
+
+.rgba-black-strong, .rgba-black-strong:after {
+    background-color:rgba(0, 0, 0, 0)
+}

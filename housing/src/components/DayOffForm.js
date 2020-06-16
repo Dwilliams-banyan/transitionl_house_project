@@ -2,6 +2,7 @@ import React, {useState, Fragment} from 'react'
 import {MDBBtn} from 'mdbreact'
 import {connect} from 'react-redux'
 import {addDayOffNotice} from '../action/requestAction'
+import '../style/hover.css'
 
 const DayOffForm = ({addDayOffNotice, history}) => {
     
@@ -33,8 +34,8 @@ const DayOffForm = ({addDayOffNotice, history}) => {
 
     return (
         <div className="form-group w-50 m-auto">
-            {error && <h2>{error}</h2>}
             <h1> Time-Off Request Form </h1>
+            {error && <h2>{error}</h2>}
             <label>Resident's name : </label>
             <input 
             type="text" 
@@ -89,8 +90,8 @@ const DayOffForm = ({addDayOffNotice, history}) => {
             <br/>        
             <div className="text-center">
                 <Fragment>
-                    <MDBBtn className='mr-5' rounded color="red" onClick={onCancel}>Cancel</MDBBtn>
-                    <MDBBtn rounded color="green" onClick={onSubmit}>Submit</MDBBtn>
+                    <MDBBtn className='mr-5' color="white" rounded  onClick={onCancel}>Cancel</MDBBtn>
+                    <MDBBtn rounded color="white" onClick={onSubmit}>Submit</MDBBtn>
                 </Fragment>
             </div>
 
