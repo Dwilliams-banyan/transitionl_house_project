@@ -28,28 +28,64 @@ const SignUp = ({history,addUser}) =>{
         history.push('/')
     }
 
-
+ 
     return(
         <div className="form-group text-center w-50 m-auto">
             <h3>Signing Up</h3>
             {error && <h4>{error}</h4>}
             <label className="mt-5">First Name</label>
-            <input className="form-control text-center" type="text" value={firstName} onChange={(e) => setFirstName(e.target.vakue)} />
+            <input
+             className="form-control text-center"
+             type="text"
+             value={firstName}
+             onChange={(e) => setFirstName(e.target.vakue)}
+            />
+
 
             <label>Last Name</label>
-            <input className="form-control text-center" type="text" value={lastName} onChange={(e) => setLastName(e.target.vakue)} />
+            <input
+             className="form-control text-center"
+             type="text"
+             value={lastName}
+             onChange={(e) => setLastName(e.target.vakue)}
+            />
+
 
             <label>Phone Number</label>
-            <input className="form-control m-auto w-50 text-center" type="number" value={number} onChange={(e) => setNumber(e.target.vakue)} />
+            <input
+             className="form-control m-auto w-50 text-center"
+             type="number"
+             value={number}
+             onChange={(e) => setNumber(e.target.vakue)}
+            />
+
 
             <label>UserName</label>
-            <input className="form-control text-center" type="text" value={userName} onChange={(e) => setUserName(e.target.vakue)} />
+            <input
+             className="form-control text-center"
+             type="text"
+             value={userName}
+             onChange={(e) => setUserName(e.target.vakue)}
+            />
 
-            <labe>Password</labe>
-            <input className="form-control text-center" type="password" value={password} onChange={(e) => setPassword(e.target.vakue)} />
+
+            <label>Password</label>
+            <input
+             className="form-control text-center"
+             type="password"
+             value={password}
+             onChange={(e) => setPassword(e.target.vakue)}
+            />
+
 
             <label>Re-enter Password</label>
-            <input className="form-control text-center" type="passwprd" value={thePassword} onChange={(e) => setThePassword(e.target.vakue)} />
+            <input
+             className="form-control text-center"
+             type="passwprd"
+             value={thePassword}
+             onChange={(e) => setThePassword(e.target.vakue)}
+            />
+
             <br/>
             <Fragment>
                 <MDBBtn color="white" className="mr-5" rounded onClick={onCancel}>Cancel</MDBBtn>

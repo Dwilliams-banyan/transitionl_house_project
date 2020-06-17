@@ -7,3 +7,8 @@ export const addUser = (user)=>({
         id : uuidv4()
     }
 })
+
+export const signIn = ({userName,password})=>({
+    type:'SIGNIN',
+    logIn : {userName,password}
+})

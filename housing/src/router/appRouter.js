@@ -11,6 +11,8 @@ import WeekEndList from '../components/WeekEndList'
 import Footer from '../components/Footer'
 import AddResidentForm from "../components/AddResidentForm"
 import SignUp from '../components/Sign_up'
+import SignIn from '../components/Sign_In'
+import AfterSignUp from '../components/AfterSignUp'
  
 const AppRouter = () => (
     <BrowserRouter>
@@ -22,6 +24,7 @@ const AppRouter = () => (
                 <Route path="/moveout_form" component={MoveOutForm} />
                 <Route path="/day-off_form" component={DayOffForm} />
                 <Route path='/sign-up_page' component={SignUp} />
+                <Route path='/sign-in_page' component={SignIn} />
 
 
                 {/* only adminsters will be able to see pages under here */}
@@ -29,6 +32,7 @@ const AppRouter = () => (
                 <Route path="/weekend_pass_list" component={WeekEndList} />
                 <Route path="/day-off_request_list" component={DayOffRequestList} />
                 <Route path="/addresident" component={AddResidentForm} />
+                <Route path="/admins_only" component={AfterSignUp} />
             </Switch>
             <Footer />
         </div>

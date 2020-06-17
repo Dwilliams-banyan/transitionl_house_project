@@ -34,7 +34,7 @@ render() {
             </MDBNavItem>
 
             <MDBNavItem>
-              <MDBNavLink to="#">Sign-In</MDBNavLink>
+              <MDBNavLink to="/sign-in_page">Sign-In</MDBNavLink>
             </MDBNavItem>
 
             <MDBNavItem>
