@@ -11,17 +11,21 @@ const SignIn = ({users,history,signIn}) => {
     const [password,setPassword] = useState("")
     const [error,setError] = useState()
     
-    console.log(users[0],"!!!")
-    const onSubmit = (users) =>{
-        for (let i = 0; i < users.length; i++ ){
-            if(userName === users[i].userName && password === users[i].password){
-                alert("You have signed in successfully")
-            }
-                
-            if(i === users.length){
-                setError("You have entered the wrong userName or password")
-            }
+    // console.log(users[0],"!!!")
+    const onSubmit = () =>{
+        console.log(users)
+
+       const signed = users.filter(item => ( item.userName !== userName && item.password !== password)
+        )
+
+        if(signed.length >= 1){
+            setError("Sign in was unsuccessful try again")
         }
+        else { 
+            history.push('/admins_only')
+        }
+                       
+        
 
           
        
@@ -60,7 +64,7 @@ const SignIn = ({users,history,signIn}) => {
 
             <Fragment>
                 <MDBBtn onClick={onCancel} color="white" rounded className="mr-5">Cancel</MDBBtn>
-                <MDBBtn onClick={onSubmit({users})} color="white" rounded >Sign-In</MDBBtn>
+                <MDBBtn onClick={onSubmit} color="white" rounded >Sign-In</MDBBtn>
             </Fragment>
             
         </div>

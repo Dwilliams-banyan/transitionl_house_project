@@ -18,10 +18,13 @@ const SignUp = ({history,addUser}) =>{
 
         if(firstName == "" || lastName == "" || number == "" || userName == "" ) {
             setError("please correctly fill out the form.")
-        }else if (!password === thePassword){
+        }else if (password !== thePassword){
             setError("Your password must match try again")
         }
-        addUser(data)
+        else{
+            addUser(data)
+            history.push('/admins_only')
+        }
     }
 
     const onCancel = ()=>{
@@ -38,7 +41,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control text-center"
              type="text"
              value={firstName}
-             onChange={(e) => setFirstName(e.target.vakue)}
+             onChange={(e) => setFirstName(e.target.value)}
             />
 
 
@@ -47,7 +50,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control text-center"
              type="text"
              value={lastName}
-             onChange={(e) => setLastName(e.target.vakue)}
+             onChange={(e) => setLastName(e.target.value)}
             />
 
 
@@ -56,7 +59,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control m-auto w-50 text-center"
              type="number"
              value={number}
-             onChange={(e) => setNumber(e.target.vakue)}
+             onChange={(e) => setNumber(e.target.value)}
             />
 
 
@@ -65,7 +68,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control text-center"
              type="text"
              value={userName}
-             onChange={(e) => setUserName(e.target.vakue)}
+             onChange={(e) => setUserName(e.target.value)}
             />
 
 
@@ -74,7 +77,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control text-center"
              type="password"
              value={password}
-             onChange={(e) => setPassword(e.target.vakue)}
+             onChange={(e) => setPassword(e.target.value)}
             />
 
 
@@ -83,7 +86,7 @@ const SignUp = ({history,addUser}) =>{
              className="form-control text-center"
              type="passwprd"
              value={thePassword}
-             onChange={(e) => setThePassword(e.target.vakue)}
+             onChange={(e) => setThePassword(e.target.value)}
             />
 
             <br/>
