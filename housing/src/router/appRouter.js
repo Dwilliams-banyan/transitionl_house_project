@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NavBarApp from '../components/Navbar'
 import Home from "../components/Home"
 import WeekEndForm from '../components/WeekEndForm'
@@ -13,7 +13,7 @@ import AddResidentForm from "../components/AddResidentForm"
 import SignUp from '../components/Sign_up'
 import SignIn from '../components/Sign_In'
 import AfterSignUp from '../components/AfterSignUp'
- 
+
 const AppRouter = () => (
     <BrowserRouter>
         <div className="peach-gradient">

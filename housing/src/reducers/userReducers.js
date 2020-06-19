@@ -1,15 +1,15 @@
 const defaultUser = []
 
-export default (state=defaultUser,action)=>{
-    switch(action.type){
+export default (state = defaultUser, action) => {
+    switch (action.type) {
         case "ADD_USER":
-            return [...state,action.user]
-        
+            return [...state, action.user]
+
         case "SIGNIN":
-            console.log(state,"Okay that's good")
-            return [...state,action.user]
+            console.log(state, "Okay that's good")
+            return [...state, action.user]
 
         default:
-           return state
+            return state
     }
 }

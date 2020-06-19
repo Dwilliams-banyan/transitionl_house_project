@@ -1,9 +1,9 @@
 import React from 'react';
 import DayOffNotice from './DayOffNotice'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-const DayOffRequestList =(props) =>{
-    return(
+const DayOffRequestList = (props) => {
+    return (
         <div>
             <h1>DeMarcus Tests TOO</h1>
             {props.request.map(item => (
@@ -13,8 +13,8 @@ const DayOffRequestList =(props) =>{
     )
 }
 
-const mapStateToProps = (state)=> ({
-    request : state.request
+const mapStateToProps = (state) => ({
+    request: state.request
 })
 
 export default connect(mapStateToProps)(DayOffRequestList)

@@ -3,16 +3,16 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNav
 
 
 class NavBarApp extends Component {
-state = {
-  isOpen: false
-};
+  state = {
+    isOpen: false
+  };
 
-toggleCollapse = () => {
-  this.setState({ isOpen: !this.state.isOpen });
-}
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
 
-render() {
-  return (
+  render() {
+    return (
 
       <MDBNavbar color="light-blue" dark expand="md">
 
@@ -43,22 +43,22 @@ render() {
 
             <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle  color=" amber lighten-1">
+                <MDBDropdownToggle color=" amber lighten-1">
                   House Requests
                 </MDBDropdownToggle>
 
                 <MDBDropdownMenu basic>
 
-                  <MDBNavLink to="/weekend_pass_form"> 
-                    <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem> 
+                  <MDBNavLink to="/weekend_pass_form">
+                    <MDBDropdownItem>Visit or Weekend Pass</MDBDropdownItem>
                   </MDBNavLink>
 
-                  <MDBNavLink to="/day-off_form"> 
-                    <MDBDropdownItem>Time Off</MDBDropdownItem> 
+                  <MDBNavLink to="/day-off_form">
+                    <MDBDropdownItem>Time Off</MDBDropdownItem>
                   </MDBNavLink>
 
-                  <MDBNavLink to="/moveout_form"> 
-                    <MDBDropdownItem>Moving Out</MDBDropdownItem> 
+                  <MDBNavLink to="/moveout_form">
+                    <MDBDropdownItem>Moving Out</MDBDropdownItem>
                   </MDBNavLink>
 
                 </MDBDropdownMenu>
@@ -69,7 +69,7 @@ render() {
 
         </MDBCollapse>
       </MDBNavbar>
-   
+
     );
   }
 }

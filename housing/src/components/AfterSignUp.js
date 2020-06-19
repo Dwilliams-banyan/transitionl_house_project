@@ -1,8 +1,8 @@
 import React from 'react'
 import { MDBRow, MDBCol, MDBContainer, MDBCard, MDBIcon, MDBCardTitle } from 'mdbreact'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
-const AfterSignUp = ()=>{
+const AfterSignUp = () => {
     return (
         <div className="text-center mt-5">
             <h1>What would you like to do today?</h1>
@@ -11,15 +11,15 @@ const AfterSignUp = ()=>{
                     <MDBCol>
                         <Link to="/weekend_pass_list">
                             <MDBCard
-                            className="card-image"
-                            style={{backgroundImage:"url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
+                                className="card-image"
+                                style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
                             >
                                 <div
-                                className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
+                                    className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
                                 >
                                     <div>
                                         <h5 className="green-text">
-                                            <MDBIcon icon="chart-pie"/> Resdient's Visit Requests
+                                            <MDBIcon icon="chart-pie" /> Resdient's Visit Requests
                                         </h5>
 
                                         <MDBCardTitle tag="h3" className="pt-2">
@@ -35,15 +35,15 @@ const AfterSignUp = ()=>{
                     <MDBCol className="">
                         <Link to="/weekend_pass_list">
                             <MDBCard
-                            className="card-image"
-                            style={{backgroundImage:"url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
+                                className="card-image"
+                                style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
                             >
                                 <div
-                                className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
+                                    className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
                                 >
                                     <div>
                                         <h5 className="green-text">
-                                            <MDBIcon icon="chart-pie"/> Resident's Week-end Requests 
+                                            <MDBIcon icon="chart-pie" /> Resident's Week-end Requests
                                         </h5>
 
                                         <MDBCardTitle tag="h3" className="pt-2">
@@ -57,21 +57,21 @@ const AfterSignUp = ()=>{
                     </MDBCol>
                 </MDBRow>
 
-                    <br/>
+                <br />
 
                 <MDBRow>
-                <MDBCol>
+                    <MDBCol>
                         <Link to="/day-off_request_list">
                             <MDBCard
-                            className="card-image"
-                            style={{backgroundImage:"url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
+                                className="card-image"
+                                style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
                             >
                                 <div
-                                className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
+                                    className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
                                 >
                                     <div>
                                         <h5 className="green-text">
-                                            <MDBIcon icon="chart-pie"/> Resident's Time Off Requests
+                                            <MDBIcon icon="chart-pie" /> Resident's Time Off Requests
                                         </h5>
 
                                         <MDBCardTitle tag="h3" className="pt-2">
@@ -87,15 +87,15 @@ const AfterSignUp = ()=>{
                     <MDBCol className="">
                         <Link to="/moveout_list">
                             <MDBCard
-                            className="card-image"
-                            style={{backgroundImage:"url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
+                                className="card-image"
+                                style={{ backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/City/6-col/img%20(47).jpg')" }}
                             >
                                 <div
-                                className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
+                                    className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4"
                                 >
                                     <div>
                                         <h5 className="green-text">
-                                            <MDBIcon icon="chart-pie"/> Resident's two-week notice
+                                            <MDBIcon icon="chart-pie" /> Resident's two-week notice
                                         </h5>
 
                                         <MDBCardTitle tag="h3" className="pt-2">

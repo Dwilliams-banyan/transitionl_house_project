@@ -1,7 +1,7 @@
 const defaultRequest = []
 
-export default (state=defaultRequest,action) =>{
-    switch(action.type){
+export default (state = defaultRequest, action) => {
+    switch (action.type) {
         case "ADD_DAY_OFF_NOTICE":
             return [...state, action.notice]
 

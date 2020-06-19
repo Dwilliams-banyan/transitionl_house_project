@@ -5,8 +5,8 @@ import userReducers from '../reducers/userReducers'
 
 export default () => {
     return createStore(combineReducers({
-        resident : fileReducer,
-        request : requestReducers,
-        users : userReducers
+        resident: fileReducer,
+        request: requestReducers,
+        users: userReducers
     }))
 }

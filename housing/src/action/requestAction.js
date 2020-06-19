@@ -1,30 +1,30 @@
-import { v4 as uuidv4} from 'uuid'
- 
+import { v4 as uuidv4 } from 'uuid'
+
 
 export const addDayOffNotice = (notice) => ({
-    type : "ADD_DAY_OFF_NOTICE",
+    type: "ADD_DAY_OFF_NOTICE",
     notice: {
         ...notice,
-        request : "day off",
-        id:uuidv4()
+        request: "day off",
+        id: uuidv4()
     }
 })
 
 export const addMoveOutNotice = (notice) => ({
-    type : "ADD_MOVE_OUT_NOTICE",
-    notice : {
+    type: "ADD_MOVE_OUT_NOTICE",
+    notice: {
         ...notice,
-        request : "move out",
-        id : uuidv4()
+        request: "move out",
+        id: uuidv4()
     }
-    
+
 })
 
-export const addWeekEndPassNotice = (notice) =>({
-    type : "ADD_WEEK_END_PASS_NOTICE",
-    notice : {
+export const addWeekEndPassNotice = (notice) => ({
+    type: "ADD_WEEK_END_PASS_NOTICE",
+    notice: {
         ...notice,
-        request : "weekend pass",
+        request: "weekend pass",
         id: uuidv4()
     }
 })
