@@ -1,15 +1,14 @@
-// name  dayOfBirth age moveInDate parole release
+// Resident Model
 
-// const { Sequelize } = require("sequelize/types");
+module.exports = (sequelize,Sequelize) => {
+    const Resident = sequelize.define('residents', {
+        name : {type: Sequelize.STRING},
+        age : {type: Sequelize.STRING},
+        dayOfBirth : {type: Sequelize.STRING},
+        moveInDate : {type: Sequelize.STREING},
+        parole : {type: Sequelize.STRING},
+        releaseDate : {type: Sequelize.STRING},
 
-// module.exports = (sequelize,Sequelize) => {
-//     const Resident = sequelize.define('residents', {
-//         name : {type: Sequelize.},
-//         age : {type: Sequelize.},
-//         dayOfBirth : {type: Sequelize.},
-//         moveInDate : {type: Sequelize.},
-//         parole : {type: Sequelize.},
-//         release : {type: Sequelize.},
-
-//     })
-// }
+    })
+     return Resident
+}

@@ -24,6 +24,16 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
+db.resident = require('../model/resident.model')(sequelize,Sequelize)
+
+db.dayOff = require('../model/dayOff.model')(sequelize,Sequelize)
+
+db.moveOut = require('../model/moveOut.model')(sequelize,Sequelize)
+
+db.weekendpass = require('../model/weekendpass.model')(sequelize,Sequelize)
+
+
+
 module.exports.db
 
 
